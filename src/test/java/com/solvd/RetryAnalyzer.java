@@ -17,12 +17,12 @@ public class RetryAnalyzer implements IRetryAnalyzer {
     public RetryAnalyzer() throws IOException {
         Properties properties = new Properties();
         properties.load(new FileInputStream("src/test/resources/retryCnt.properties"));
-        maxRetry = (int) properties.get("retry_cnt");
+        maxRetry = Integer.parseInt((String) properties.get("retry_cnt"));
 
     }
 
     @Override
     public boolean retry(ITestResult iTestResult) {
-        return ++cnt < maxRetry;
+        return cnt++ < maxRetry;
     }
 }
