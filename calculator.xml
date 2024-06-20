@@ -7,10 +7,6 @@
     <test verbose="2" preserve-order="true" name="Calculator" parallel="methods">
         <classes>
             <class name="com.solvd.TestCalculator">
-                <methods>
-                    <include name="testAddition"/>
-                    <include name="testSubtraction"/>
-                </methods>
             </class>
         </classes>
     </test>

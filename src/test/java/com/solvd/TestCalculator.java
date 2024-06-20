@@ -14,4 +14,9 @@ public class TestCalculator {
     public void testSubtraction() {
         Assert.assertEquals(5 - 1, 1);
     }
+
+    @Test
+    public void testMultiplying() {
+        Assert.assertEquals(5 * 5, 25);
+    }
 }
