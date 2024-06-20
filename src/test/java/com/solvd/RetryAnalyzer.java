@@ -32,6 +32,6 @@ public class RetryAnalyzer implements IRetryAnalyzer, IAnnotationTransformer {
 
     @Override
     public boolean retry(ITestResult iTestResult) {
-        return cnt++ < maxRetry;
+        return !iTestResult.isSuccess() && cnt++ < maxRetry;
     }
 }
